@@ -3,7 +3,7 @@ import { ListaProdutos } from "../Components/ListaProdutos"
 import  styles from "./Produtos.module.css";
 import {AiFillEdit as Editar} from "react-icons/ai";
 import {MdDeleteForever as Excluir} from "react-icons/md";
-import AddProdutos from "./AddProdutos";
+import {IoAddCircleSharp as Add} from "react-icons/io";
 
 export default function Produtos() {
 
@@ -30,7 +30,7 @@ export default function Produtos() {
                     <td>{produto.id}</td>
                     <td>{produto.nome}</td>
                     <td>{produto.preco}</td>
-                    <td><Link to={`/editar/produtos/${produto.id}`}> <Editar/> </Link> | <Link to={`/excluir/produtos/${produto.id}`}> <Excluir/> </Link> | <Link to={`/add/produtos/${produto.id}`}> <AddProdutos/> </Link></td>
+                    <td><Link to={`/editar/produtos/${produto.id}`}> <Editar/> </Link> | <Link to={`/excluir/produtos/${produto.id}`}> <Excluir/> </Link> | <Link to={`/add/produtos/${produto.id}`}> <Add/> </Link></td>
                  </tr>
             ))}
         </tbody>
