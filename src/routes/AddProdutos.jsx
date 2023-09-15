@@ -1,7 +1,9 @@
 import { ListaProdutos } from "../Components/ListaProdutos"
-export default function AddProdutos(){
+import { useState } from "react";
 
-    const [produtos, setProdutos] = useState(ListaProdutos);
+
+export default function AddProdutos(){
+  const [produtos, setProdutos] = useState(ListaProdutos);
   const [novoProduto, setNovoProduto] = useState({ id: '', nome: '', preco: '' });
 
   const adicionarProduto = () => {
@@ -58,4 +60,4 @@ export default function AddProdutos(){
       </div>
     </div>
   );
-          }
+}
