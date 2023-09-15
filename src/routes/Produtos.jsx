@@ -22,7 +22,6 @@ export default function Produtos() {
                 <th className={styles.tableHeader}>NOME</th>
                 <th className={styles.tableHeader}>PREÇO</th>
                 <th className={styles.tableHeader}>EDITAR / EXCLUIR</th>
-                <th className={styles.tableHeader}>ADICIONAR</th>
             </tr>
             </thead>
             <tbody>
@@ -37,8 +36,8 @@ export default function Produtos() {
         </tbody>
         <tfoot>
         <tr>
-          <Link to={`/add/produtos`}> <BiSolidAlarmAdd/> </Link>
-           <td colSpan={4} style={{textAlign:"center"}}>PRODUTOS</td>
+          <Link  to={`/add/produtos`}> <BiSolidAlarmAdd/> </Link>
+           <td colSpan={4} style={{textAlign:"center"}}>PRODUTOS </td>
         </tr>
         </tfoot>
         </table>

@@ -1,5 +1,6 @@
 import { ListaProdutos } from "../Components/ListaProdutos"
 import { useState } from "react";
+import './AddProdutos.css'
 
 
 export default function AddProdutos(){
@@ -38,19 +39,19 @@ export default function AddProdutos(){
       </table>
       <div>
         <h2>Adicionar Novo Produto</h2>
-        <input
+        <input className="input-m"
           type="text"
           placeholder="ID"
           value={novoProduto.id}
           onChange={(e) => setNovoProduto({ ...novoProduto, id: e.target.value })}
         />
-        <input
+        <input className="input-m"
           type="text"
           placeholder="Nome"
           value={novoProduto.nome}
           onChange={(e) => setNovoProduto({ ...novoProduto, nome: e.target.value })}
         />
-        <input
+        <input className="input-m"
           type="text"
           placeholder="Preço"
           value={novoProduto.preco}
