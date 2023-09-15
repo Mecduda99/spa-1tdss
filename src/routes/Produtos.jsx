@@ -3,6 +3,7 @@ import { ListaProdutos } from "../Components/ListaProdutos"
 import  styles from "./Produtos.module.css";
 import {AiFillEdit as Editar} from "react-icons/ai";
 import {MdDeleteForever as Excluir} from "react-icons/md";
+import AddProdutos from "./AddProdutos";
 
 export default function Produtos() {
 
@@ -20,6 +21,7 @@ export default function Produtos() {
                 <th className={styles.tableHeader}>NOME</th>
                 <th className={styles.tableHeader}>PREÇO</th>
                 <th className={styles.tableHeader}>EDITAR / EXCLUIR</th>
+                <th className={styles.tableHeader}>ADICIONAR</th>
             </tr>
             </thead>
             <tbody>
@@ -28,7 +30,7 @@ export default function Produtos() {
                     <td>{produto.id}</td>
                     <td>{produto.nome}</td>
                     <td>{produto.preco}</td>
-                    <td><Link to={`/editar/produtos/${produto.id}`}> <Editar/> </Link> | <Link to={`/excluir/produtos/${produto.id}`}> <Excluir/> </Link></td>
+                    <td><Link to={`/editar/produtos/${produto.id}`}> <Editar/> </Link> | <Link to={`/excluir/produtos/${produto.id}`}> <Excluir/> </Link> | <Link to={`/add/produtos/${produto.id}`}> <AddProdutos/> </Link></td>
                  </tr>
             ))}
         </tbody>
